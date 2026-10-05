@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_calendar
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: day_num
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sell_prices
+    columns:
+      - name: store_id
+        tests:
+          - not_null
+      - name: item_id
+        tests:
+          - not_null
+      - name: sell_price
+        tests:
+          - not_null
+
+  - name: stg_sales_unpivoted
+    columns:
+      - name: item_id
+        tests:
+          - not_null
+      - name: store_id
+        tests:
+          - not_null
