@@ -1,0 +1,25 @@
+# Model Evaluation: Prophet vs LightGBM
+
+12-week holdout, compared at category level (LightGBM store x dept forecasts summed to category).
+
+## Metrics
+
+| model | level | MAE | RMSE | WMAPE | Bias% |
+|---|---|---|---|---|---|
+| prophet | FOODS | 21936.0 | 24125.5 | 0.1115 | 11.15 |
+| prophet | HOBBIES | 2387.0 | 2512.5 | 0.0876 | -8.76 |
+| prophet | HOUSEHOLD | 3189.0 | 3607.7 | 0.0451 | -3.61 |
+| prophet | ALL (total) | 17237.0 | 20004.0 | 0.0585 | 5.77 |
+| lightgbm | FOODS | 18624.6 | 19134.4 | 0.0946 | 9.46 |
+| lightgbm | HOBBIES | 904.5 | 1082.1 | 0.0332 | -2.4 |
+| lightgbm | HOUSEHOLD | 1827.3 | 2326.9 | 0.0259 | 1.2 |
+| lightgbm | ALL (total) | 18815.3 | 19311.5 | 0.0638 | 6.38 |
+
+## WMAPE winner by level
+
+| level | lightgbm | prophet | winner |
+|---|---|---|---|
+| ALL (total) | 0.0638 | 0.0585 | prophet |
+| FOODS | 0.0946 | 0.1115 | lightgbm |
+| HOBBIES | 0.0332 | 0.0876 | lightgbm |
+| HOUSEHOLD | 0.0259 | 0.0451 | lightgbm |
