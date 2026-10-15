@@ -2,7 +2,7 @@
 
 Time-series forecasting platform that predicts weekly product demand per store and department from the M5 (Walmart) dataset and turns the forecasts into inventory recommendations.
 
-**Live dashboard:** _add your Streamlit Cloud link here_
+**Live dashboard:** [_Streamlit_Website_Overview_Cloud_](https://retail-demand-forecasting-inventory-optimization-project-grp-14.streamlit.app/)
 
 ## Tech stack
 Python, SQL, Google BigQuery (data warehouse), dbt (transformations), Prophet and LightGBM (forecasting), Streamlit (dashboard), Docker.
